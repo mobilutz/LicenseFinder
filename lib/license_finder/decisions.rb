@@ -293,7 +293,7 @@ module LicenseFinder
     def write!(value, file)
       file.dirname.mkpath
       file.open('w+') do |f|
-        f.print value
+        f.print(value.rstrip)
       end
     end
   end
